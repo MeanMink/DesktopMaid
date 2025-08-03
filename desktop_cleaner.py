@@ -7,11 +7,11 @@ from shutil import move
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-source_dir = "/Users/ThinkPad P53s/Downloads"
-dest_dir_docs = "/Users/ThinkPad P53s/Desktop/Folder_Docs"
-dest_dir_soundsnmusic = "/Users/ThinkPad P53s/Desktop/Folder_Sounds"
-dest_dir_zip = "/Users/ThinkPad P53s/Desktop/Folder_Zip"
-dest_dir_images = "/Users/ThinkPad P53s/Desktop/Folder_Images"
+source_dir = "SOURCE_DIR"
+dest_dir_docs = "DOCS_DIR"
+dest_dir_soundsnmusic = "AUDIO_DIR"
+dest_dir_zip = "FOLDERS_DIR"
+dest_dir_images = "IMAGES_DIR"
 
 def makeUnique(dest, name):
     filename, extension = splitext(name)
@@ -77,4 +77,5 @@ if __name__ == "__main__":
             time.sleep(1)
     except KeyboardInterrupt:
         observer.stop()
+
     observer.join()
